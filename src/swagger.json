@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rocketseat 1#Hackathon WMS Documentation",
+    "description": "API for WMS, developed for the first Rocketseat Hackathon",
+    "version": "1.0.0",
+    "contact": {
+      "email": "regisprogramming@gmail.com"
+    }
+  },
+  "paths": {
+    "/pokemon/{name}": {
+      "get": {
+        "tags": [
+          "pokemon"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "Pokemon name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Default route for get pokemon details.",
+        "description": "Default route for get pokemons details.",
+        "responses": {
+          "200": {
+            "description": "Return of route",
+            "success": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "pokemon": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ability": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "description": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "is_hidden": {
+                            "type": "boolean"
+                          },
+                          "slot": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
