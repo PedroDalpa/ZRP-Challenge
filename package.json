@@ -1,0 +1,8 @@
+{
+  "name": "zrp_challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:phdgamer/ZRP-Challenge.git",
+  "author": "<pedro380dalpa@gmail.com>",
+  "license": "MIT"
+}
